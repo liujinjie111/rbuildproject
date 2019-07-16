@@ -17,7 +17,7 @@ scalep <- function(factors, divisors, constant = 1, graph = FALSE) {
   if (requireNamespace("ggplot2", quietly = TRUE) & graph) {
     print(ggplot2::qplot(proportions, geom='histogram'))
   } else if (graph) {
-    print(graphics::hist(proportions))
+    warning(graphics::hist(proportions))
   }
 
   # Return the result
